@@ -12,12 +12,47 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="379dp"
+            android:id="@+id/contactList"
+            android:layout_weight="0.78" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/name"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/phone"
+                android:layout_weight="1"
+                android:text="Phone Number" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/addButton"
+                android:layout_weight="1" />
+        </LinearLayout>
 
     </LinearLayout>
+
 </RelativeLayout>
